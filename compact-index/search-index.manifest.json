@@ -1,0 +1,56 @@
+{
+  "artifact_mode": "production",
+  "canonical_browser_database": "compact-search-index",
+  "clip_model": "openai/clip-vit-large-patch14",
+  "decode_scale": 127,
+  "embed_dim": 768,
+  "embedding_model": "openai/clip-vit-large-patch14",
+  "embedding_space": "clip-image-lance",
+  "files": {
+    "models.meta.jsonl.br": {
+      "bytes": 2288594,
+      "sha256": "fa741f04cd61cb5d9cbecbfb00a4295eca8f1f2bed4d6416fd74dc33ff888da8"
+    },
+    "search-index.meta.json": {
+      "bytes": 2183,
+      "sha256": "1138993c897aa5c733a51d5b44c69ad0d6e056db103c8ecf56f9096206f568e9"
+    },
+    "vectors.i8.bin": {
+      "bytes": 36535296,
+      "sha256": "8dfc5a5f4855e87f81ccd1e0a239f2ccf10b63f2bbee5999191c94c9efc67339"
+    }
+  },
+  "from_hyper_compressed_thumbs": false,
+  "from_thumbs_pack": false,
+  "generated_at": "2026-11-14T19:03:42.185Z",
+  "import_required": false,
+  "index_format": "modeldb-compact-int8-v1",
+  "inference": "lance-db-clip-vectors",
+  "model_count": 47572,
+  "query_encoder": "clip-text",
+  "query_endpoint": "/clip/embed",
+  "schema_version": 4,
+  "source": "lance-db-clip-vectors",
+  "source_files": {
+    "meta.json": {
+      "bytes": 1863,
+      "sha256": "0fd7dec0a7a8137a35e3ec346a9e6c13a8167c197ed7301af0650dffd2577204"
+    },
+    "models.jsonl.br": {
+      "bytes": 29310443,
+      "sha256": "f907e88d8f359f4042e0b3787dab2446f70a3ebfc033ef2de11d13c498558bdf"
+    }
+  },
+  "strict_gate": {
+    "allow_fixture": false,
+    "required_semantic_fields": [
+      "artifact_mode=production",
+      "embedding_space=clip-image-lance",
+      "clip_model=openai/clip-vit-large-patch14",
+      "source=lance-db-clip-vectors",
+      "from_hyper_compressed_thumbs=false",
+      "query_encoder compatible with embedding_space"
+    ]
+  },
+  "vector_count": 47572
+}

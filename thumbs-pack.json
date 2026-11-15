@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "active": true,
+  "source": "/workspace/index/lance/thumbs.pack",
+  "documentation": "/workspace/index/lance/THUMBS_PACK.md",
+  "bytes": 38969785,
+  "sha256": "fcd8d6ed88180f567e32c37a1d58a9b595de2cb8228d171f9955e8faee4b07f1",
+  "models": 47572,
+  "views": 7,
+  "tile_px": 64,
+  "grid": {"width": 4, "height": 2, "sheet_px": {"width": 256, "height": 128}, "unused_cells": 1},
+  "header": {
+    "offset": 0,
+    "size": 13,
+    "format": "<5sBBBBI",
+    "magic": "TIDX1",
+    "endian": "little",
+    "fields": ["magic", "tile", "views", "grid_w", "grid_h", "count"]
+  },
+  "record_table": {
+    "offset": 13,
+    "record_size": 38,
+    "format": "<32sIH",
+    "fields": ["raw_sha256_32", "uint32_blob_offset", "uint16_blob_length"],
+    "sorted_by": "raw_sha256_32",
+    "lookup": "binary search"
+  },
+  "blobs": {
+    "offset": 1807749,
+    "content_type": "image/webp",
+    "description": "standalone 256x128 WebP sprite sheets; each record offset/length addresses one WebP"
+  },
+  "view_rule": {
+    "column": "n % grid.width",
+    "row": "Math.floor(n / grid.width)",
+    "n_range": "0..6",
+    "sprite_css": "background-position: -(n%4*size)px -(Math.floor(n/4)*size)px; background-size: 4*size 2*size"
+  },
+  "routes": {
+    "sheet": "/thumb/pack/<64-char-hash>",
+    "view": "/thumb/pack/<64-char-hash>/<n>",
+    "missing": 404
+  },
+  "serve_command": "cd /workspace/modeldb/wasm && npm run serve -- --cross-origin-isolation --thumbs-pack /workspace/index/lance/thumbs.pack",
+  "display": "Use /thumb/pack/<hash>/<n> as an <img> src, or use the sheet route as a CSS sprite. No thumbnails are unpacked or copied into the browser package."
+}

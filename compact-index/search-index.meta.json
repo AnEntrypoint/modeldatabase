@@ -1,0 +1,73 @@
+{
+  "artifact_mode": "production",
+  "canonical_browser_database": "compact-search-index",
+  "clip_model": "openai/clip-vit-large-patch14",
+  "cosine": "dot(int8_values, normalized_query) / L2(int8_values); decode_scale cancels",
+  "database_endpoint": null,
+  "decode": "embedding = int8_value / decode_scale",
+  "decode_scale": 127,
+  "embed_dim": 768,
+  "embedding_model": "openai/clip-vit-large-patch14",
+  "embedding_space": "clip-image-lance",
+  "files": {
+    "models.meta.jsonl.br": {
+      "bytes": 2288594,
+      "sha256": "fa741f04cd61cb5d9cbecbfb00a4295eca8f1f2bed4d6416fd74dc33ff888da8"
+    },
+    "vectors.i8.bin": {
+      "bytes": 36535296,
+      "sha256": "8dfc5a5f4855e87f81ccd1e0a239f2ccf10b63f2bbee5999191c94c9efc67339"
+    }
+  },
+  "from_hyper_compressed_thumbs": false,
+  "from_thumbs_pack": false,
+  "generated_at": "2026-11-14T19:03:42.185Z",
+  "import_required": false,
+  "index_format": "modeldb-compact-int8-v1",
+  "inference": "lance-db-clip-vectors",
+  "model_count": 47572,
+  "prompt_template": null,
+  "query_encoder": "clip-text",
+  "query_endpoint": "/clip/embed",
+  "query_prompt_templates": [
+    "{}",
+    "a 3d model of {}",
+    "a rendered asset of {}"
+  ],
+  "query_runtime": {
+    "kind": "clip-text",
+    "model": "openai/clip-vit-large-patch14",
+    "prompts": [
+      "{}",
+      "a 3d model of {}",
+      "a rendered asset of {}"
+    ]
+  },
+  "schema_version": 4,
+  "source": "lance-db-clip-vectors",
+  "source_checksums": [
+    {
+      "bytes": 1863,
+      "name": "meta.json",
+      "sha256": "0fd7dec0a7a8137a35e3ec346a9e6c13a8167c197ed7301af0650dffd2577204"
+    },
+    {
+      "bytes": 29310443,
+      "name": "models.jsonl.br",
+      "sha256": "f907e88d8f359f4042e0b3787dab2446f70a3ebfc033ef2de11d13c498558bdf"
+    }
+  ],
+  "source_files": {
+    "meta.json": {
+      "bytes": 1863,
+      "sha256": "0fd7dec0a7a8137a35e3ec346a9e6c13a8167c197ed7301af0650dffd2577204"
+    },
+    "models.jsonl.br": {
+      "bytes": 29310443,
+      "sha256": "f907e88d8f359f4042e0b3787dab2446f70a3ebfc033ef2de11d13c498558bdf"
+    }
+  },
+  "vector_count": 47572,
+  "vector_dtype": "int8",
+  "vector_layout": "row-major 47572x768, signed two's complement"
+}
