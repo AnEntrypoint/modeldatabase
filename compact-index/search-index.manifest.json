@@ -7,10 +7,6 @@
   "embedding_model": "openai/clip-vit-large-patch14",
   "embedding_space": "clip-image-lance",
   "files": {
-    "models.meta.jsonl": {
-      "bytes": 18672110,
-      "sha256": "7f46728592a91b4f200d6ccad702caf70b98dd3b64d3c3a0c82a0a2acad400b7"
-    },
     "models.meta.jsonl.br": {
       "bytes": 2288594,
       "sha256": "fa741f04cd61cb5d9cbecbfb00a4295eca8f1f2bed4d6416fd74dc33ff888da8"
